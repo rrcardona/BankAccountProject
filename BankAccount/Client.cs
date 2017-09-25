@@ -30,7 +30,7 @@ namespace BankAccount
         public void DisplayAccount(string accountName)
         {
             this.accountName = accountName;
-            Console.WriteLine("\n\t{0}\n\tAccount Information : {1}\n\t{2}\n\n\n",accountName,accountAddress,accountPhone);
+            Console.WriteLine("\n{0}\n{1}\n{2}\n\n\n",accountName,accountAddress,accountPhone);
         }
         public Client()
         {

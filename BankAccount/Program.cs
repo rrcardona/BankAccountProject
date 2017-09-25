@@ -31,48 +31,55 @@ namespace BankAccount
             int userChoice = 0;
             double amount;
 
-            Console.WriteLine();
+            Console.WriteLine(  );
             display.DisplayHeader();
             Console.WriteLine();
 
             do
             {
                 display.MenuOptions();
-                //Console.Write(" Please select a number of your choice ");
+                Console.Write(" Please select a number of your choice ");
                 userChoice = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine();
                 switch (userChoice)
                 {
                     case 1:
                         Console.Write("How much money would you like to deposit to your Checking Account: $");
                         amount = Convert.ToDouble(Console.ReadLine());
                         checkingAccount.Deposit(amount);
-                        Console.WriteLine(" Your current balance is now {0}", " " + checkingAccount.CurrentBalance);
+                        Console.WriteLine(" Your current checking account balance is now ${0}", " " + checkingAccount.CurrentBalance);
+                        Console.WriteLine();
                         break;
                     case 2:
                         Console.Write("How much money would you like to deposit to your Savings Account: $");
                         amount = Convert.ToDouble(Console.ReadLine());
                         savingsAccount.Deposit(amount);
-                        Console.WriteLine(" Your current balance is now {0}", " " + savingsAccount.CurrentBalance);
+                        Console.WriteLine(" Your current savings account balance is now ${0}", " " + savingsAccount.CurrentBalance);
+                        Console.WriteLine();
                         break;
                     case 3:
                         Console.Write("How much would you like to withdraw from your Checking Account: $");
                         amount = Convert.ToDouble(Console.ReadLine());
                         checkingAccount.Withdrawal(amount);
-                        Console.WriteLine(" Your current balance is now {0}", " " + checkingAccount.CurrentBalance);
+                        Console.WriteLine(" Your current checking account balance is now ${0}", " " + checkingAccount.CurrentBalance);
+                        Console.WriteLine();
                         break;
                     case 4:
                         Console.Write("How much money would you like to withdraw from your Savings Account: $");
                         amount = Convert.ToDouble(Console.ReadLine());
                         savingsAccount.Withdrawal(amount);
-                        Console.WriteLine(" Your current balance is now {0}", " " + savingsAccount.CurrentBalance);
+                        Console.WriteLine(" Your current savings account balance is now ${0}", " " + savingsAccount.CurrentBalance);
+                        Console.WriteLine();
                         break;
                     case 5:
                         clientInfo.DisplayAccount(clientInfo.AccountName);
+                        Console.WriteLine();
                         break;
                     case 6:
-                        display.DisplayHeader();
-                        Console.WriteLine("\t{0}    {1}\t\t\t{2}\t\t\n", checkingAccount.AccountType, checkingAccount.AccountNumber, checkingAccount.CurrentBalance);
-                        Console.WriteLine("\t{0}    {1}\t\t\t{2}\t\t\n", savingsAccount.AccountType, savingsAccount.AccountNumber, savingsAccount.CurrentBalance);
+                        
+                        Console.WriteLine("{0}    {1}\t\t\t{2}\t\t\n", checkingAccount.AccountType, checkingAccount.AccountNumber, checkingAccount.CurrentBalance);
+                        Console.WriteLine("{0}    {1}\t\t\t{2}\t\t\n", savingsAccount.AccountType, savingsAccount.AccountNumber, savingsAccount.CurrentBalance);
+                        Console.WriteLine();
                         break;
                 }
             } while (userChoice != 7);

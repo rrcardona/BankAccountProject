@@ -10,11 +10,11 @@ namespace BankAccount
     {
         public void Greeting()
         {
-            Console.WriteLine("Welcome to TreeBank - Where Money does grow on trees. \n\nPlease enter your first and last name for assistance");
+            Console.WriteLine("Welcome to TreeBank - Where Money does grow on trees. \n\nPlease enter your first and last name so we can access your account");
         }
         public void MenuOptions()
         {
-            Console.WriteLine("1 - Deposit to Checking \n2 - Deposit to Savings \n3 - Withdraw from Checking \n4 - Withdraw from Savings \n5 - View Account Information \n6 - View Balance \n7 - Exit" );
+            Console.WriteLine("1 - Deposit to Checking \n2 - Deposit to Savings \n3 - Withdraw from Checking \n4 - Withdraw from Savings \n5 - View Account Information \n6 - View Balance \n7 - Exit \n" );
         }
 
         public void DisplayHeader()
